@@ -54,6 +54,16 @@
     </a-nft>
     <a-entity camera></a-entity>
   </a-scene>
+
+  <script>
+    AFRAME.registerComponent('markerhandler', {
+      init: function () {
+        this.el.sceneEl.addEventListener('markerFound', () => {
+          window.alert("marker found");
+        })
+      }
+    });
+  </script>
   </body>
 </html>
 
