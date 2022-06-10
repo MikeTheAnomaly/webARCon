@@ -3,6 +3,7 @@
   
 <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
 
 <style>
   .arjs-loader {
@@ -46,31 +47,22 @@
       smoothCount="10"
       smoothTolerance=".01"
       smoothThreshold="5"
-      size="0.2032 0.2032"
     >
       <a-entity
-        gltf-model="https://miketheanomaly.github.io/webARCon/moth2.gltf"
-        animation-mixer="loop: repeat;"
+        gltf-model="./moth2.gltf"
+        animation-mixer="clip: test; loop: repeat;"
         scale="1000 1000 1000"
         position="0 0 0"
         emiteevents="true"
       >
       </a-entity>
+     
     </a-nft>
     
     <a-entity camera> </a-entity>
   </a-scene>
 
-  <script>
-    AFRAME.registerComponent('markerhandler', {
-      init: function () {
-        this.el.sceneEl.addEventListener('markerFound', () => {
-          window.alert("marker found");
-          console.log("test");
-        })
-      }
-    });
-  </script>
+
   </body>
 </html>
 
