@@ -37,16 +37,19 @@
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
   >
     <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
+    <!-- url="https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/trex-image/trex"-->
     <a-nft
       type="nft"
-      url="https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/trex-image/trex"
       smooth="true"
+      url="https://miketheanomaly.github.io/webARCon/MelButterfly"
       smoothCount="10"
       smoothTolerance=".01"
       smoothThreshold="5"
     >
       <a-entity
         gltf-model="https://miketheanomaly.github.io/webARCon/moth.gltf"
+        begin="2000"
+        animation-mixer="clip: ArmatureAction; loop: repeat;"
         scale="500 500 500"
         position="0 0 0"
         size="0.2032"
