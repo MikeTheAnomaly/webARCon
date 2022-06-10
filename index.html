@@ -49,11 +49,11 @@
       size="0.2032 0.2032"
     >
       <a-entity
-        gltf-model="https://miketheanomaly.github.io/webARCon/moth.gltf"
-        begin="100"
+        gltf-model="https://miketheanomaly.github.io/webARCon/moth2.gltf"
+        begin="1"
         animation-mixer="clip:ArmatureAction; loop: repeat;"
         scale="500 500 500"
-        position="400 100 -100"
+        position="0 0 0"
         emiteevents="true"
       >
       </a-entity>
@@ -66,6 +66,7 @@
       init: function () {
         this.el.sceneEl.addEventListener('markerFound', () => {
           window.alert("marker found");
+          console.log("test");
         })
       }
     });
